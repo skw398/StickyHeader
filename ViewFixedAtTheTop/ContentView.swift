@@ -28,8 +28,8 @@ struct ContentView: View {
                                 .background(.green)
                                 .offset(
                                     y: {
-                                        let distanceToTheTop = scrollViewGeo.frame(in: .global).minY - fixedViewGeo.frame(in: .global).minY
-                                        return distanceToTheTop > 0 ? distanceToTheTop : 0
+                                        let distanceToTheTop = fixedViewGeo.frame(in: .global).minY - scrollViewGeo.frame(in: .global).minY
+                                        return distanceToTheTop < 0 ? -distanceToTheTop : 0
                                     }()
                                 )
                         }
