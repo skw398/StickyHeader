@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    private let fixedViewHeight: CGFloat = 100
-    
+struct ContentView: View {    
     var body: some View {
         NavigationView {
             GeometryReader { scrollViewGeo in
@@ -33,7 +31,7 @@ struct ContentView: View {
                                     }()
                                 )
                         }
-                        .frame(height: fixedViewHeight)
+                        .frame(height: 100)
                         .zIndex(1)
                         
                         VStack(spacing: 0) {
