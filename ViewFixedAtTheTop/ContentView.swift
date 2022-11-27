@@ -27,7 +27,7 @@ struct ContentView: View {
                                 .offset(
                                     y: {
                                         let distanceToTheTop = fixedViewGeo.frame(in: .global).minY - scrollViewGeo.frame(in: .global).minY
-                                        return distanceToTheTop < 0 ? -distanceToTheTop : 0
+                                        return max(-distanceToTheTop, 0)
                                     }()
                                 )
                         }
